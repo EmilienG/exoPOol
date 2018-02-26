@@ -16,8 +16,13 @@ public class ControllerMain extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();
+        
         String pageJSP = "/WEB-INF/home.jsp";
         String section = request.getParameter("section");
+        
+        if("menu-main".equals(section)){
+            pageJSP = "/WEB-INF/menus/menu-main.jsp";
+        }
 
         pageJSP = response.encodeURL(pageJSP);
         getServletContext().getRequestDispatcher(pageJSP).include(request, response);
