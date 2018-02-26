@@ -10,7 +10,7 @@ public class MaConnexion implements Serializable{
     
     public MaConnexion() throws NamingException{
         InitialContext context = new InitialContext();
-        ds = context.lookup("jsbc/librairie")
+        ds = (DataSource) context.lookup("jsbc/librairie");
         
     }
     
