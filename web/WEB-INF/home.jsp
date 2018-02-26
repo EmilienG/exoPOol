@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="/projetPoolGeographie/css/newcss.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
     </head>
