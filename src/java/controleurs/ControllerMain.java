@@ -1,12 +1,17 @@
 package controleurs;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import obj.livre;
+import traitements.GestionLivre;
 
 @WebServlet(name = "ControllerMain", urlPatterns = {"/ControllerMain"})
 public class ControllerMain extends HttpServlet {
@@ -16,12 +21,25 @@ public class ControllerMain extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();
-        
+
         String pageJSP = "/WEB-INF/home.jsp";
         String section = request.getParameter("section");
-        
-        if("menu-main".equals(section)){
+
+        if (getServletContext().getAttribute("gestionLivre") == null) {
+            try {
+                getServletContext().setAttribute("gestionLivre", new GestionLivre());
+                List<String> clefs = GestionLivre.getCleDefaut();
+            } catch (NamingException ex) {
+                ex.printStackTrace();
+            }
+        }
+        GestionLivre gestionLivre = (GestionLivre) getServletContext().getAttribute("gestionLivre");
+        if ("menu-main".equals(section)) {
             pageJSP = "/WEB-INF/menus/menu-main.jsp";
+        }
+
+        if ("afficher-livre".equals(section)) {
+            HashMap<String, List<livre>> mp = gestionLivre.findLivres();
         }
 
         pageJSP = response.encodeURL(pageJSP);
