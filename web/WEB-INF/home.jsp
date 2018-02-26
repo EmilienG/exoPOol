@@ -1,5 +1,6 @@
 
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,6 +9,10 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Hello Wissam!</h1>
+        <nav>
+            <c:url value="ControllerMain?section=menu-main" var="url01" />
+            <c:import url="${url01}" />
+        </nav>
+        <h1>Hello Toi!</h1>
     </body>
 </html>
