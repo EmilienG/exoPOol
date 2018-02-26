@@ -1,0 +1,73 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 févr. 2018, 10:58:13
+    Author     : cdi206
+*/
+
+head{
+    text-align:center;
+}
+body{
+    background-color:#ccccff;
+    /*background-image:url(do-it-yvette-motif-pasteque-2.jpg);*/
+    /*background-attachment:fixed;*/
+    background-size: 1000px 800px;
+    font-family: sans-serif;
+
+}
+
+H1 {
+    text-align:center;
+    color:indigo; 
+    font-size:25pt;
+}
+H2 {
+    text-align:center;
+    color:teal; 
+    font-size:18pt;
+}
+H3 {
+    text-align:center;
+    color:darkred; 
+    font-size:8pt;
+}
+H5 {
+    text-align:center;
+    color:crimson; 
+    font-size:12pt;
+}
+H88 {
+    text-align:center;
+    color: windowtext; 
+    font-size:8pt;
+}
+
+t6 {
+    text-align:center;
+    color:green; 
+    font-size:10pt;
+}
+t7 {
+    text-align:center;
+    color:green; 
+    font-size:12pt;
+}
+t1 {
+    text-align:center;
+    color:blue; 
+    font-size:10pt;
+}
+table {
+    text-align:center;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    text-align:center;
+    border: 1px solid black;
+    text-align: right;
+}
