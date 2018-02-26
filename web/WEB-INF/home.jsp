@@ -14,6 +14,6 @@
             <c:url value="ControllerMain?section=menu-main" var="url01" />
             <c:import url="${url01}" />
         </nav>
-        <h1>Hello Toi!</h1>
+        <h1>Hello Toi !</h1>
     </body>
 </html>
